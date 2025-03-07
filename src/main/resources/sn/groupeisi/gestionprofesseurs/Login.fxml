@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.Color?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sn.groupeisi.examensf.Controller.LoginController"
+            prefHeight="500.0" prefWidth="600.0"
+            style="-fx-background-color: #f0f0f0;">
+
+    <!-- Conteneur principal centré -->
+    <VBox alignment="CENTER" spacing="20.0"
+          layoutX="100.0" layoutY="50.0" prefWidth="400.0"
+          style="-fx-background-color: white; -fx-background-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 20, 0, 0, 10);">
+
+        <!-- Image (Icône utilisateur) avec bord arrondi -->
+        <ImageView fitWidth="90.0" fitHeight="90.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="https://cdn-icons-png.flaticon.com/512/149/149071.png"/>
+            </image>
+        </ImageView>
+
+        <!-- Champ Email -->
+        <TextField fx:id="emailField" promptText="Entrez votre Email"
+                   prefHeight="40.0" prefWidth="300.0"
+                   style="-fx-background-color: #f4f4f4; -fx-border-radius: 5; -fx-prompt-text-fill: #888;" />
+
+        <!-- Champ Mot de passe -->
+        <PasswordField fx:id="passwordField" promptText="Mot de passe"
+                       prefHeight="40.0" prefWidth="300.0"
+                       style="-fx-background-color: #f4f4f4; -fx-border-radius: 5; -fx-prompt-text-fill: #888;" />
+
+
+        <Button fx:id="loginButton" text="Connexion" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5; -fx-font-size: 14px;" onAction="#handleLogin" prefHeight="40.0" prefWidth="250.0" styleClass="custom-button"/>
+
+        <!-- Lien pour le mot de passe oublié -->
+        <Hyperlink text="Mot de passe oublié ?"
+                   style="-fx-text-fill: #4CAF50; -fx-font-size: 12px; -fx-padding: 10px 0 0 0;" />
+
+    </VBox>
+</AnchorPane>
