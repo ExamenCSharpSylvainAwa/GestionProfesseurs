@@ -1,4 +1,4 @@
-package sn.groupeisi.examensf;
+package sn.groupeisi.gestionprofesseurs;
 
 
 import javax.persistence.EntityManagerFactory;

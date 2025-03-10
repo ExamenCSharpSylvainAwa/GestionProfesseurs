@@ -1,21 +1,20 @@
-package sn.groupeisi.examensf.Utils;
+package sn.groupeisi.gestionprofesseurs.Utils;
 
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import lombok.Getter;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
-import sn.groupeisi.examensf.Entities.Users;
 
 public class HibernateUtil {
     @Getter
-    private static final SessionFactory sessionFactory;
+    private static final EntityManagerFactory entityManagerFactory = buildEntityManagerFactory();
 
-    static {
+    private static EntityManagerFactory buildEntityManagerFactory() {
         try {
-            // Création de la SessionFactory
-            sessionFactory = new Configuration().configure("hibernate.cfg.xml").addAnnotatedClass(Users.class).buildSessionFactory();
-        } catch (Exception e) {
-            throw new ExceptionInInitializerError("Initial SessionFactory creation failed." + e);
+            // Crée l'EntityManagerFactory à partir de persistence.xml
+            return Persistence.createEntityManagerFactory("PERSISTENCE");
+        } catch (Throwable ex) {
+            ex.printStackTrace(); // Afficher l'exception complète
+            throw new ExceptionInInitializerError("Initial EntityManagerFactory creation failed: " + ex);
         }
     }
-
 }

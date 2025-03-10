@@ -1,9 +1,6 @@
 package sn.groupeisi.gestionprofesseurs.Entities;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -18,22 +15,32 @@ import javax.persistence.*;
 @Builder
 public class Users {
 
+    @Setter
+    @Getter
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Setter
+    @Getter
     @Column(name = "nom", nullable = false)
     private String nom;
 
+    @Setter
+    @Getter
     @Column(name = "prenom", nullable = false)
     private String prenom;
 
+    @Getter
+    @Setter
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Setter
+    @Getter
     @Column(name = "role", nullable = false)
     private String role;
 
@@ -45,4 +52,15 @@ public class Users {
         this.password = password;
         this.role = role;
     }
+    public Users(int id, String nom, String prenom, String email, String role) {
+        this.id = (long) id;
+        this.nom = nom;
+        this.prenom = prenom;
+        this.email = email;
+        this.role = role;
+    }
+
+
+    // Autres getters et setters pour les autres champs
+
 }

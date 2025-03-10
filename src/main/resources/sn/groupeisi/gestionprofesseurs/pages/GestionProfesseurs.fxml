@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="842.0" prefWidth="824.0"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionProfesseurController">
+
+    <children>
+        <!-- Table des Professeurs -->
+        <TableView fx:id="userTable" layoutX="314.0" layoutY="164.0" prefHeight="400.0" prefWidth="492.0">
+            <columns>
+                <TableColumn fx:id="colnom" prefWidth="75.0" text="Nom" />
+                <TableColumn fx:id="colprenom" prefWidth="77.0" text="Prénom" />
+                <TableColumn fx:id="colemail" prefWidth="120.0" text="Email" />
+                <TableColumn fx:id="colrole" prefWidth="90.0" text="Rôle" />
+            </columns>
+        </TableView>
+
+        <!-- Champ caché pour l'ID -->
+        <TextField fx:id="idField" layoutX="38.0" layoutY="237.0" visible="false" />
+
+        <!-- Titre -->
+        <Label layoutX="79.0" layoutY="29.0" text="Gestion Professeurs">
+            <font>
+                <Font name="System Bold Italic" size="33.0" />
+            </font>
+        </Label>
+
+        <!-- Champs de saisie -->
+        <Label layoutX="34.0" layoutY="154.0" text="Nom">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="nomField" layoutX="145.0" layoutY="155.0" />
+
+        <Label layoutX="34.0" layoutY="247.0" text="Prénom">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="prenomField" layoutX="145.0" layoutY="248.0" />
+
+        <Label layoutX="34.0" layoutY="335.0" text="Email">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <TextField fx:id="emailField" layoutX="145.0" layoutY="336.0" />
+
+        <Label layoutX="36.0" layoutY="421.0" text="Mot de passe">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField" layoutX="154.0" layoutY="422.0" />
+
+        <Label layoutX="36.0" layoutY="520.0" text="Rôle">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Label>
+        <ComboBox fx:id="roleComboBox" layoutX="146.0" layoutY="522.0" prefHeight="27.0" prefWidth="151.0" />
+
+        <!-- Boutons d'action -->
+        <Button fx:id="btnAjouter" layoutX="50.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="49.0" prefWidth="105.0" text="Ajouter" />
+        <Button layoutX="261.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="49.0" prefWidth="105.0" text="Modifier" />
+        <Button layoutX="465.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="49.0" prefWidth="105.0" text="Supprimer" />
+        <Button fx:id="btnFermer" layoutX="651.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="49.0" prefWidth="105.0" text="Fermer" />
+
+    </children>
+</AnchorPane>

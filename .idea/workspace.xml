@@ -4,11 +4,39 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8409011f-2822-418a-a511-0d647c9a59d6" name="Changes" comment="" />
+    <list default="true" id="8409011f-2822-418a-a511-0d647c9a59d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/DatabaseService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Entities/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/JPAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/JPAUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/HibernateUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/adminDashboard.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/hello-view.fxml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -20,23 +48,47 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2tzd8i0gHlYlsdBF9BNilxzcYGA" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/SYLVAIN FAYE/Documents/Documents de Cheikh Sylvain FAYE/L3/JAVA/GestionProfesseurs/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/adminDashboard.fxml&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\src\main\resources\sn\groupeisi\gestionprofesseurs" />
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\src\main\resources" />
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\src\main\java\sn\groupeisi\gestionprofesseurs\Entities" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\src\main\resources\sn\groupeisi\gestionprofesseurs\pages" />
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\src\main\resources" />
+      <recent name="C:\SYLVAIN FAYE\Documents\Documents de Cheikh Sylvain FAYE\L3\JAVA\GestionProfesseurs\.idea" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="sn.groupeisi.gestionprofesseurs.dao" />
+      <recent name="sn.groupeisi.gestionprofesseurs.Controllers" />
+      <recent name="sn.groupeisi.gestionprofesseurs.Utils" />
+      <recent name="sn.groupeisi.gestionprofesseurs" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -47,5 +99,18 @@
       <updated>1741358681831</updated>
     </task>
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.RuntimeException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
