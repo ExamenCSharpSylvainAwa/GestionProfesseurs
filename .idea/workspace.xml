@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8409011f-2822-418a-a511-0d647c9a59d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/DatabaseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionCoursController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionSallesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/CoursService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/SalleService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCours.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSalles.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/HelloController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Entities/Users.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/JPAUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/JPAUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/HibernateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/HibernateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/adminDashboard.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/hello-view.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="FxmlFile" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>

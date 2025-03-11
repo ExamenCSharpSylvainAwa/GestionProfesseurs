@@ -23,6 +23,23 @@ public class AdminController implements Initializable {
     }
     @FXML
     void btnCours(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/GestionCours.fxml"));
+            Parent fxml = loader.load();
+            // Charge le fichier FXML correctement
+
+
+            // Récupère la scène actuelle
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+            // Remplace la scène avec la nouvelle page
+            stage.setScene(new Scene(fxml));
+            stage.setTitle("Gestion des Cours");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
@@ -53,6 +70,26 @@ public class AdminController implements Initializable {
 
     @FXML
     void btnRapport(ActionEvent event) {
+
+    }
+    @FXML
+    void  btnSalle(ActionEvent event){
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/GestionSalles.fxml"));
+            Parent fxml = loader.load();
+            // Charge le fichier FXML correctement
+
+
+            // Récupère la scène actuelle
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+            // Remplace la scène avec la nouvelle page
+            stage.setScene(new Scene(fxml));
+            stage.setTitle("Gestion des Salles");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
     @FXML

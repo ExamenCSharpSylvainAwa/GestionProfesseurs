@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.AdminController">
    <children>
       <Label layoutX="66.0" layoutY="172.0" text="Administrateur">
@@ -16,22 +15,22 @@
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="358.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" prefWidth="131.0" text="PROFESSEURS">
+      <Button layoutX="358.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" prefWidth="141.0" text="PROFESSEURS">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="582.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnCours" prefHeight="54.0" prefWidth="131.0" text="COURS">
+      <Button layoutX="358.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnCours" prefHeight="54.0" prefWidth="141.0" text="COURS">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="582.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnRapport" prefHeight="54.0" prefWidth="131.0" text="RAPPORTS">
+      <Button layoutX="429.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnRapport" prefHeight="54.0" prefWidth="200.0" text="RAPPORTS">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="358.0" layoutY="450.0" mnemonicParsing="false" onAction="#btnEmergements" prefHeight="54.0" prefWidth="131.0" text="EMERGEMENTS">
+      <Button layoutX="586.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnEmergements" prefHeight="54.0" prefWidth="141.0" text="EMERGEMENTS">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>
@@ -48,6 +47,11 @@
       <Button fx:id="btnDeconnexion" layoutX="30.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnDeconnexion" prefHeight="54.0" prefWidth="269.0" text="DECONNEXION" textFill="#fb0808">
          <font>
             <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="581.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSalle" prefHeight="54.0" prefWidth="141.0" text="Salles">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
          </font>
       </Button>
    </children>
