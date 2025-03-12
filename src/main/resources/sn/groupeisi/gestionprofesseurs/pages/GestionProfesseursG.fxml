@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionProfesseurController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionProfesseurControllerG">
 
     <children>
         <!-- Table des Professeurs -->
@@ -27,7 +27,7 @@
         <TextField fx:id="idField" layoutX="38.0" layoutY="237.0" visible="false" />
 
         <!-- Titre -->
-        <Label layoutX="79.0" layoutY="29.0" text="Gestion Utilisateurs">
+        <Label layoutX="79.0" layoutY="29.0" text="Gestion Professeurs">
             <font>
                 <Font name="System Bold Italic" size="33.0" />
             </font>

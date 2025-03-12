@@ -19,6 +19,7 @@ module sn.groupeisi.gestionprofesseurs {
     requires java.persistence;
     requires org.hibernate.orm.core;
     requires spring.security.crypto;
+    requires jakarta.mail;
 
     opens sn.groupeisi.gestionprofesseurs to javafx.fxml;
     exports sn.groupeisi.gestionprofesseurs;

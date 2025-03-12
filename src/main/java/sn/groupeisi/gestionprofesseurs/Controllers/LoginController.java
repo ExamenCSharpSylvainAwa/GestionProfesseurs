@@ -54,7 +54,10 @@ public class LoginController implements Initializable {
             if ("Administrateur".equals(user.getRole())) {
                 // Si l'utilisateur est un administrateur, charger la page Admin
                 loadAdminPage();
-            } else {
+            }if ("Gestionnaire".equals(user.getRole())){
+                loadGestionnairePage();
+            }
+            else {
                 showAlert("Erreur", "Vous n'êtes pas autorisé à accéder à cette page", Alert.AlertType.ERROR);
             }
         } else {
@@ -67,6 +70,27 @@ public class LoginController implements Initializable {
         try {
             // Vérifie si la ressource existe
             URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml");
+
+            if (fxmlLocation == null) {
+                showAlert("Erreur", "Le fichier FXML est introuvable : pages/Admin.fxml", Alert.AlertType.ERROR);
+                return;
+            }
+
+            Parent fxml = FXMLLoader.load(fxmlLocation);
+            this.connexionPage.getChildren().clear();
+            this.connexionPage.getChildren().add(fxml);
+            Stage stage = (Stage) connexionPage.getScene().getWindow();
+            stage.setTitle("Admin");
+
+        } catch (IOException e) {
+            e.printStackTrace(); // Affiche l'erreur dans la console
+            showAlert("Erreur", "Impossible de charger le tableau de bord : " + e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+    private void loadGestionnairePage() {
+        try {
+            // Vérifie si la ressource existe
+            URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/Gestionnaire.fxml");
 
             if (fxmlLocation == null) {
                 showAlert("Erreur", "Le fichier FXML est introuvable : pages/Admin.fxml", Alert.AlertType.ERROR);

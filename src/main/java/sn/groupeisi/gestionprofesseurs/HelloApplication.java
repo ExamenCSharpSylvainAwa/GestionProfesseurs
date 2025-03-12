@@ -10,8 +10,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws Exception {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("pages/Login.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 650, 440);
-        stage.setTitle("Page de Connexion");
-        stage.setScene(scene);
+        stage.setTitle("Page de Connexion");        stage.setScene(scene);
         stage.show();
     }
 

@@ -107,4 +107,5 @@ public class CoursService {
             if (entityManager != null) entityManager.close();
         }
     }
+
 }

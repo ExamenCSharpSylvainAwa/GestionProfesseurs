@@ -21,10 +21,9 @@ import sn.groupeisi.gestionprofesseurs.Services.SalleService;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalTime;
-import java.util.List;
 import java.util.ResourceBundle;
 
-public class GestionCoursController implements Initializable {
+public class GestionCoursControllerG implements Initializable {
 
     @FXML
     private TextField txtNom;
@@ -257,22 +256,26 @@ public class GestionCoursController implements Initializable {
         }
     }
     @FXML
-    private void btnFermer() {
+    void btnFermer(ActionEvent event) {
         try {
-            URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml");
+            // Charge l'FXML de la page Admin
+            URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/Gestionnaire.fxml");
             if (fxmlLocation == null) {
                 showAlert("Erreur", "Le fichier FXML de la page Admin est introuvable.", Alert.AlertType.ERROR);
                 return;
             }
 
-            Parent adminPage = FXMLLoader.load(fxmlLocation);
+            // Créer une nouvelle scène avec la page Gestionnaire
+            Parent gestionnairepage = FXMLLoader.load(fxmlLocation);
             Stage stage = (Stage) btnFermer.getScene().getWindow();
-            stage.setTitle("Page Administrateur");
-            stage.setScene(new Scene(adminPage));
+            stage.setTitle("Page Gestionnaire");
+
+            // Charger la nouvelle scène dans la fenêtre existante
+            stage.setScene(new Scene(gestionnairepage));
 
         } catch (IOException e) {
             e.printStackTrace();
-            showAlert("Erreur", "Impossible de charger la page Admin : " + e.getMessage(), Alert.AlertType.ERROR);
+            showAlert("Erreur", "Impossible de charger la page Gestionnaire : " + e.getMessage(), Alert.AlertType.ERROR);
         }
     }
 
