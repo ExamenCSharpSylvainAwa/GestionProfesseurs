@@ -123,7 +123,17 @@ public class UserService {
             if (entityManager != null) entityManager.close();
         }
     }
-
+    public Users getUtilisateurConnecte(Long userId) {
+        EntityManager entityManager = null;
+        try {
+            entityManager = HibernateUtil.getEntityManagerFactory().createEntityManager();
+            return entityManager.find(Users.class, userId); // Recherche de l'utilisateur par son ID
+        } finally {
+            if (entityManager != null) {
+                entityManager.close();
+            }
+        }
+    }
 
 
 }

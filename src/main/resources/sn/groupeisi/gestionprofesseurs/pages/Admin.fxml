@@ -15,7 +15,7 @@
             <Font name="System Bold Italic" size="28.0" />
          </font>
       </Label>
-      <Button layoutX="358.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" prefWidth="141.0" text="PROFESSEURS">
+      <Button layoutX="358.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" prefWidth="141.0" text="Utilisateurs">
          <font>
             <Font name="System Bold Italic" size="12.0" />
          </font>

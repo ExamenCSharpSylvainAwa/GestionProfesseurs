@@ -45,7 +45,22 @@ public class AdminController implements Initializable {
 
     @FXML
     void btnEmergements(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/GestionEmergements.fxml"));
+            Parent fxml = loader.load();
+            // Charge le fichier FXML correctement
 
+
+            // Récupère la scène actuelle
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+
+            // Remplace la scène avec la nouvelle page
+            stage.setScene(new Scene(fxml));
+            stage.setTitle("Gestion des Emargements");
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML

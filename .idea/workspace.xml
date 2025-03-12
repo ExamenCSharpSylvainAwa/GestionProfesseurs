@@ -5,15 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8409011f-2822-418a-a511-0d647c9a59d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionCoursController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionSallesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/CoursService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/SalleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCours.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSalles.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionEmergementController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/EmargementService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionEmergements.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
