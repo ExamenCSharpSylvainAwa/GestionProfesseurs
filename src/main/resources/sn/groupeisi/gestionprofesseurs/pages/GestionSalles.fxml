@@ -10,42 +10,35 @@
 
 <AnchorPane prefHeight="841.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionSallesController">
    <children>
+      <!-- Title Section -->
       <Label fx:id="labelTitre" layoutX="69.0" layoutY="83.0" text="Gestion Salles">
          <font>
             <Font name="System Bold Italic" size="28.0" />
          </font>
+         <style>-fx-text-fill: #2C3E50;</style>
       </Label>
+
+      <!-- Libelle Section -->
       <Label fx:id="labelLibelle" layoutX="69.0" layoutY="178.0" text="Libelle">
          <font>
             <Font name="System Bold" size="17.0" />
          </font>
+         <style>-fx-text-fill: #34495E;</style>
       </Label>
-      <TextField fx:id="txtLibelle" layoutX="161.0" layoutY="178.0" />
-      <TableView fx:id="salleTable" layoutX="342.0" layoutY="178.0" prefHeight="373.0" prefWidth="515.0">
+      <TextField fx:id="txtLibelle" layoutX="161.0" layoutY="178.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #BDC3C7; -fx-font-size: 16px; -fx-padding: 5px;" />
+
+      <!-- Table View Section -->
+      <TableView fx:id="salleTable" layoutX="342.0" layoutY="178.0" prefHeight="373.0" prefWidth="515.0" style="-fx-background-color: #ffffff; -fx-border-color: #BDC3C7;">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="121.33331298828125" text="ID" />
-            <TableColumn fx:id="colLibelle" prefWidth="161.33328247070312" text="Libelle" />
+            <TableColumn fx:id="colId" prefWidth="128.0" text="ID" />
+            <TableColumn fx:id="colLibelle" prefWidth="381.3332824707031" text="Libelle" />
          </columns>
       </TableView>
-      <Button fx:id="btnAjouter" layoutX="69.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="51.0" prefWidth="139.0" text="Ajouter">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnModifier" layoutX="288.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="51.0" prefWidth="139.0" text="Modifier">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnSupprimer" layoutX="506.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="51.0" prefWidth="149.0" text="Supprimer">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Button>
-      <Button fx:id="btnFermer" layoutX="707.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="51.0" prefWidth="149.0" text="Fermer">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Button>
+
+      <!-- Button Section -->
+      <Button fx:id="btnAjouter" layoutX="69.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="51.0" prefWidth="139.0" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 23px; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-cursor: hand;" text="Ajouter" />
+      <Button fx:id="btnModifier" layoutX="288.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="51.0" prefWidth="139.0" style="-fx-background-color: #F39C12; -fx-text-fill: white; -fx-font-size: 23px; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-cursor: hand;" text="Modifier" />
+      <Button fx:id="btnSupprimer" layoutX="506.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="51.0" prefWidth="149.0" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 23px; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-cursor: hand;" text="Supprimer" />
+      <Button fx:id="btnFermer" layoutX="707.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="51.0" prefWidth="149.0" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 23px; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-cursor: hand;" text="Fermer" />
    </children>
 </AnchorPane>

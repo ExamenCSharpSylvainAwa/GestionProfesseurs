@@ -10,11 +10,11 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="824.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionProfesseurController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="842.0" prefWidth="892.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionProfesseurController">
 
     <children>
         <!-- Table des Professeurs -->
-        <TableView fx:id="userTable" layoutX="314.0" layoutY="164.0" prefHeight="400.0" prefWidth="492.0">
+        <TableView fx:id="userTable" layoutX="386.0" layoutY="130.0" prefHeight="422.0" prefWidth="492.0" style="-fx-border-color: #4CAF50; -fx-border-width: 2;">
             <columns>
                 <TableColumn fx:id="colnom" prefWidth="91.3333740234375" text="Nom" />
                 <TableColumn fx:id="colprenom" prefWidth="118.0" text="Prénom" />
@@ -27,65 +27,70 @@
         <TextField fx:id="idField" layoutX="38.0" layoutY="237.0" visible="false" />
 
         <!-- Titre -->
-        <Label layoutX="79.0" layoutY="29.0" text="Gestion Utilisateurs">
+        <Label layoutX="32.0" layoutY="46.0" text="Gestion Utilisateurs">
             <font>
                 <Font name="System Bold Italic" size="33.0" />
             </font>
+            <style>-fx-text-fill: #4CAF50;</style>
         </Label>
 
         <!-- Champs de saisie -->
-        <Label layoutX="34.0" layoutY="154.0" text="Nom">
+        <Label layoutX="36.0" layoutY="130.0" text="Nom">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="nomField" layoutX="145.0" layoutY="155.0" />
+        <TextField fx:id="nomField" layoutX="166.0" layoutY="131.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-border-color: #4CAF50; -fx-border-radius: 5;" />
 
-        <Label layoutX="34.0" layoutY="247.0" text="Prénom">
+        <Label layoutX="34.0" layoutY="223.0" text="Prénom">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="prenomField" layoutX="145.0" layoutY="248.0" />
+        <TextField fx:id="prenomField" layoutX="166.0" layoutY="224.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-border-color: #4CAF50; -fx-border-radius: 5;" />
 
-        <Label layoutX="34.0" layoutY="335.0" text="Email">
+        <Label layoutX="32.0" layoutY="322.0" text="Email">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <TextField fx:id="emailField" layoutX="145.0" layoutY="336.0" />
+        <TextField fx:id="emailField" layoutX="161.0" layoutY="323.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-border-color: #4CAF50; -fx-border-radius: 5;" />
 
-        <Label layoutX="36.0" layoutY="421.0" text="Mot de passe">
+        <Label layoutX="32.0" layoutY="408.0" text="Mot de passe">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <PasswordField fx:id="passwordField" layoutX="154.0" layoutY="422.0" />
+        <PasswordField fx:id="passwordField" layoutX="166.0" layoutY="409.0" prefHeight="25.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-border-color: #4CAF50; -fx-border-radius: 5;" />
 
         <Label layoutX="36.0" layoutY="520.0" text="Rôle">
             <font>
                 <Font name="System Bold" size="19.0" />
             </font>
         </Label>
-        <ComboBox fx:id="roleComboBox" layoutX="146.0" layoutY="522.0" prefHeight="27.0" prefWidth="151.0" />
+        <ComboBox fx:id="roleComboBox" layoutX="166.0" layoutY="519.0" prefHeight="30.0" prefWidth="205.0" style="-fx-background-radius: 5; -fx-border-color: #4CAF50; -fx-border-radius: 5;" />
 
         <!-- Boutons d'action -->
-        <Button fx:id="btnAjouter" layoutX="50.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="49.0" prefWidth="105.0" text="Ajouter">
-         <font>
-            <Font name="System Bold" size="18.0" />
-         </font></Button>
-        <Button layoutX="261.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="49.0" prefWidth="105.0" text="Modifier">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font></Button>
-        <Button layoutX="465.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="49.0" prefWidth="105.0" text="Supprimer">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font></Button>
-        <Button fx:id="btnFermer" layoutX="651.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="49.0" prefWidth="105.0" text="Fermer">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font></Button>
+        <Button fx:id="btnAjouter" layoutX="50.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="49.0" prefWidth="127.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 5;" text="Ajouter">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+        </Button>
+        <Button layoutX="261.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="49.0" prefWidth="127.0" style="-fx-background-color: #FF9800; -fx-text-fill: white; -fx-background-radius: 5;" text="Modifier">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Button>
+        <Button layoutX="465.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="49.0" prefWidth="127.0" style="-fx-background-color: #F44336; -fx-text-fill: white; -fx-background-radius: 5;" text="Supprimer">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Button>
+        <Button fx:id="btnFermer" layoutX="651.0" layoutY="658.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="49.0" prefWidth="127.0" style="-fx-background-color: #9E9E9E; -fx-text-fill: white; -fx-background-radius: 5;" text="Fermer">
+            <font>
+                <Font name="System Bold" size="19.0" />
+            </font>
+        </Button>
 
     </children>
 </AnchorPane>

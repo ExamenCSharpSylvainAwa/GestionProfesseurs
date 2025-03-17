@@ -282,6 +282,7 @@ public class GestionEmergementController implements Initializable {
             comboProfesseur.setValue(selectionne.getProfesseur());
             comboCours.setValue(selectionne.getCours());
         }
+        btnAjouter.setDisable(true);
     }
 
     private void setStatutSelectionne(String statut) {
@@ -316,7 +317,7 @@ public class GestionEmergementController implements Initializable {
         colCours.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCours().getNom()));
 
         tableView.setItems(listeEmargements);
-        btnAjouter.setDisable(true);
+        btnAjouter.setDisable(false);
 
         configurerComboBoxProfesseur();
         configurerComboBoxCours();

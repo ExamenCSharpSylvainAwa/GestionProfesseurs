@@ -8,43 +8,55 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="841.0" prefWidth="883.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionSallesControllerG">
+<AnchorPane prefHeight="841.0" prefWidth="883.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionSallesControllerG">
    <children>
-      <Label fx:id="labelTitre" layoutX="69.0" layoutY="83.0" text="Gestion Salles">
+      <!-- Titre -->
+      <Label fx:id="labelTitre" layoutX="69.0" layoutY="50.0" style="-fx-text-fill: #2c3e50;" text="Gestion des Salles">
          <font>
-            <Font name="System Bold Italic" size="28.0" />
+            <Font name="Arial Bold" size="30.0" />
          </font>
       </Label>
-      <Label fx:id="labelLibelle" layoutX="69.0" layoutY="178.0" text="Libelle">
+
+      <!-- Label Libelle -->
+      <Label fx:id="labelLibelle" layoutX="69.0" layoutY="150.0" style="-fx-text-fill: #34495e;" text="Libellé :">
          <font>
-            <Font name="System Bold" size="17.0" />
+            <Font name="Arial" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtLibelle" layoutX="161.0" layoutY="178.0" />
-      <TableView fx:id="salleTable" layoutX="342.0" layoutY="178.0" prefHeight="373.0" prefWidth="515.0">
+
+      <!-- Champ de texte -->
+      <TextField fx:id="txtLibelle" layoutX="150.0" layoutY="145.0" prefHeight="35.0" prefWidth="150.0" style="-fx-background-radius: 8; -fx-border-color: #bdc3c7; -fx-border-radius: 8;" />
+
+      <!-- TableView -->
+      <TableView fx:id="salleTable" layoutX="330.0" layoutY="150.0" prefHeight="400.0" prefWidth="515.0" style="-fx-border-color: #bdc3c7; -fx-border-radius: 10;">
          <columns>
-            <TableColumn fx:id="colId" prefWidth="121.33331298828125" text="ID" />
-            <TableColumn fx:id="colLibelle" prefWidth="161.33328247070312" text="Libelle" />
+            <TableColumn fx:id="colId" prefWidth="149.33331298828125" text="ID" />
+            <TableColumn fx:id="colLibelle" prefWidth="363.3333435058594" text="Libellé" />
          </columns>
       </TableView>
-      <Button fx:id="btnAjouter" layoutX="69.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="51.0" prefWidth="139.0" text="Ajouter">
+
+      <!-- Boutons -->
+      <Button fx:id="btnAjouter" layoutX="69.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #27ae60; -fx-text-fill: white; -fx-background-radius: 10;" text="Ajouter">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="Arial Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnModifier" layoutX="288.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="51.0" prefWidth="139.0" text="Modifier">
+
+      <Button fx:id="btnModifier" layoutX="240.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnModifier" prefHeight="50.0" prefWidth="140.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-background-radius: 10;" text="Modifier">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="Arial Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnSupprimer" layoutX="506.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="51.0" prefWidth="149.0" text="Supprimer">
+
+      <Button fx:id="btnSupprimer" layoutX="410.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-background-radius: 10;" text="Supprimer">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="Arial Bold" size="20.0" />
          </font>
       </Button>
-      <Button fx:id="btnFermer" layoutX="707.0" layoutY="612.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="51.0" prefWidth="149.0" text="Fermer">
+
+      <Button fx:id="btnFermer" layoutX="580.0" layoutY="600.0" mnemonicParsing="false" onAction="#btnFermer" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #7f8c8d; -fx-text-fill: white; -fx-background-radius: 10;" text="Fermer">
          <font>
-            <Font name="System Bold" size="23.0" />
+            <Font name="Arial Bold" size="20.0" />
          </font>
       </Button>
    </children>

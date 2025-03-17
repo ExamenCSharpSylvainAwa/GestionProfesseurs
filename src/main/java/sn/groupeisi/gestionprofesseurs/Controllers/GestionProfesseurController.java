@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;  // Correct MouseEvent import
 import javafx.stage.Stage;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 import sn.groupeisi.gestionprofesseurs.Entities.Users;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import sn.groupeisi.gestionprofesseurs.Services.UserService;
 
 import java.io.IOException;
@@ -121,7 +122,6 @@ public class GestionProfesseurController implements Initializable {
                 roleComboBox.setValue(selectedUser.getRole());
                 // Ne pas remplir le champ mot de passe
 
-                // Désactiver le bouton Ajouter car on est en mode modification
                 btnAjouter.setDisable(true);
             }
         }
@@ -212,7 +212,6 @@ public class GestionProfesseurController implements Initializable {
     private void btnFermer(ActionEvent event) {
         // Charger la page Admin
         try {
-            // Charge l'FXML de la page Admin
             URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml");
             if (fxmlLocation == null) {
                 showAlert("Erreur", "Le fichier FXML de la page Admin est introuvable.", Alert.AlertType.ERROR);

@@ -47,7 +47,7 @@ public class GestionProfesseurControllerG implements Initializable {
     @FXML
     private TableColumn<Users, String> colrole;
     @FXML
-    private Button btnFermer;
+    private Button btnFermer,btnAjouter;
 
     private final ProfesseurService professeurService = new ProfesseurService();
     private ObservableList<Users> userList = FXCollections.observableArrayList();
@@ -66,6 +66,7 @@ public class GestionProfesseurControllerG implements Initializable {
 
         chargerProfesseurs();
         userTable.setOnMouseClicked(this::onTableRowDoubleClick);
+        btnAjouter.setDisable(false);
     }
 
     @FXML
@@ -113,6 +114,8 @@ public class GestionProfesseurControllerG implements Initializable {
                 roleComboBox.setValue(selectedUser.getRole());
             }
         }
+        btnAjouter.setDisable(true);
+
     }
 
     @FXML

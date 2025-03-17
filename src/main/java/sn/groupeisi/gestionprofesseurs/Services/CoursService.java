@@ -5,6 +5,7 @@ import sn.groupeisi.gestionprofesseurs.Utils.HibernateUtil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 import java.util.List;
 
 public class CoursService {
@@ -108,4 +109,14 @@ public class CoursService {
         }
     }
 
+
+
+
+
+
+    public List<Cours> getTousLesCours() {
+        EntityManager entityManager = HibernateUtil.getEntityManagerFactory().createEntityManager();
+        TypedQuery<Cours> query = entityManager.createQuery("SELECT c FROM Cours c", Cours.class);
+        return query.getResultList();
+    }
 }

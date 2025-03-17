@@ -18,8 +18,13 @@ module sn.groupeisi.gestionprofesseurs {
     requires java.sql;
     requires java.persistence;
     requires org.hibernate.orm.core;
-    requires spring.security.crypto;
-    requires jakarta.mail;
+    requires java.mail;
+    requires spring.core;
+    requires spring.security.core;
+    requires org.apache.poi.poi;
+    requires org.apache.poi.ooxml;
+    requires org.jfree.jfreechart;
+    requires java.desktop;
 
     opens sn.groupeisi.gestionprofesseurs to javafx.fxml;
     exports sn.groupeisi.gestionprofesseurs;

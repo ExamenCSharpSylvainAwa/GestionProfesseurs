@@ -50,6 +50,8 @@ public class LoginController implements Initializable {
         // Vérifier si l'utilisateur existe
         Users user = userService.findByEmail(email);
         if (user != null && BCrypt.checkpw(password, user.getPassword())) { // Utilisation de getPassword() au lieu de getMotDePasse()
+            UserService.setCurrentUser(user);
+
             // Vérifier si l'utilisateur est un administrateur
             if ("Administrateur".equals(user.getRole())) {
                 // Si l'utilisateur est un administrateur, charger la page Admin
@@ -57,9 +59,10 @@ public class LoginController implements Initializable {
             }if ("Gestionnaire".equals(user.getRole())){
                 loadGestionnairePage();
             }
-            else {
-                showAlert("Erreur", "Vous n'êtes pas autorisé à accéder à cette page", Alert.AlertType.ERROR);
+            if ("Professeur".equals(user.getRole())){
+                loadProfesseurPage();
             }
+
         } else {
             showAlert("Erreur", "Email ou mot de passe incorrect", Alert.AlertType.ERROR);
         }
@@ -102,6 +105,27 @@ public class LoginController implements Initializable {
             this.connexionPage.getChildren().add(fxml);
             Stage stage = (Stage) connexionPage.getScene().getWindow();
             stage.setTitle("Admin");
+
+        } catch (IOException e) {
+            e.printStackTrace(); // Affiche l'erreur dans la console
+            showAlert("Erreur", "Impossible de charger le tableau de bord : " + e.getMessage(), Alert.AlertType.ERROR);
+        }
+    }
+    private void loadProfesseurPage() {
+        try {
+            // Vérifie si la ressource existe
+            URL fxmlLocation = getClass().getResource("/sn/groupeisi/gestionprofesseurs/pages/ProfesseurEmargement.fxml");
+
+            if (fxmlLocation == null) {
+                showAlert("Erreur", "Le fichier FXML est introuvable : pages/Admin.fxml", Alert.AlertType.ERROR);
+                return;
+            }
+
+            Parent fxml = FXMLLoader.load(fxmlLocation);
+            this.connexionPage.getChildren().clear();
+            this.connexionPage.getChildren().add(fxml);
+            Stage stage = (Stage) connexionPage.getScene().getWindow();
+            stage.setTitle("Professeur");
 
         } catch (IOException e) {
             e.printStackTrace(); // Affiche l'erreur dans la console

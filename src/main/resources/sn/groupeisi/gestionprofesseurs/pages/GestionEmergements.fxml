@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
@@ -7,59 +8,55 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="909.0" prefWidth="868.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.GestionEmergementController">
    <children>
-      <Label layoutX="40.0" layoutY="54.0" text="Gestion des Emargements">
+      <!-- Title Section -->
+      <Label layoutX="40.0" layoutY="41.0" text="Gestion des Emargements">
          <font>
             <Font name="System Bold Italic" size="26.0" />
          </font>
+         <style>
+            -fx-text-fill: #2C3E50;
+         </style>
       </Label>
-      <DatePicker layoutX="147.0" layoutY="167.0" fx:id="datePicker" onAction="#handleDateChange" />
-      <Label layoutX="40.0" layoutY="166.0" text="Date">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="34.0" layoutY="253.0" text="Statut">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <CheckBox layoutX="145.0" layoutY="256.0" fx:id="cbPresent" mnemonicParsing="false" onAction="#cbPresent" text="Présent">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </CheckBox>
-      <CheckBox layoutX="247.0" layoutY="258.0" fx:id="cbRetard" mnemonicParsing="false" onAction="#cbRetard" text="Retard">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </CheckBox>
-      <CheckBox layoutX="147.0" layoutY="322.0" fx:id="cbAbsent" mnemonicParsing="false" onAction="#cbAbsent" text="Absent">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </CheckBox>
-      <CheckBox layoutX="247.0" layoutY="322.0" fx:id="cbExcuse" mnemonicParsing="false" onAction="#cbExcuse" text="Excusé">
-         <font>
-            <Font name="System Bold Italic" size="15.0" />
-         </font>
-      </CheckBox>
-      <Label layoutX="40.0" layoutY="410.0" text="Professeur">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <Label layoutX="40.0" layoutY="528.0" text="Cours">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Label>
-      <ComboBox layoutX="145.0" layoutY="412.0" fx:id="comboProfesseur" onAction="#comboProfesseur" prefHeight="25.0" prefWidth="175.0" />
-      <ComboBox layoutX="145.0" layoutY="529.0" fx:id="comboCours" onAction="#comboCours" prefHeight="25.0" prefWidth="175.0" />
-      <TableView layoutX="330.0" layoutY="167.0" fx:id="tableView" prefHeight="389.0" prefWidth="523.0">
+
+      <!-- Date Picker Section -->
+      <VBox layoutX="40.0" layoutY="100.0" spacing="15.0">
+         <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #34495E;" text="Date" />
+         <DatePicker fx:id="datePicker" layoutX="147.0" onAction="#handleDateChange" style="-fx-pref-width: 200px; -fx-background-color: #ecf0f1; -fx-border-color: #BDC3C7; -fx-font-size: 16px;" />
+      </VBox>
+
+      <!-- Statut Section (Checkboxes) -->
+      <VBox layoutX="40.0" layoutY="200.0" spacing="15.0">
+         <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #34495E;" text="Statut" />
+         <HBox spacing="20.0">
+            <CheckBox fx:id="cbPresent" mnemonicParsing="false" onAction="#cbPresent" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Présent" />
+            <CheckBox fx:id="cbRetard" mnemonicParsing="false" onAction="#cbRetard" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Retard" />
+         </HBox>
+         <HBox spacing="20.0">
+            <CheckBox fx:id="cbAbsent" mnemonicParsing="false" onAction="#cbAbsent" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Absent" />
+            <CheckBox fx:id="cbExcuse" mnemonicParsing="false" onAction="#cbExcuse" style="-fx-font-size: 15px; -fx-font-weight: bold;" text="Excusé" />
+         </HBox>
+      </VBox>
+
+      <!-- Professeur Section -->
+      <VBox layoutX="40.0" layoutY="400.0" spacing="15.0">
+         <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #34495E;" text="Professeur" />
+         <ComboBox fx:id="comboProfesseur" layoutX="145.0" onAction="#comboProfesseur" prefHeight="39.0" prefWidth="199.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #BDC3C7; -fx-font-size: 16px;" />
+      </VBox>
+
+      <!-- Cours Section -->
+      <VBox layoutX="40.0" layoutY="510.0" spacing="15.0">
+         <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #34495E;" text="Cours" />
+         <ComboBox fx:id="comboCours" layoutX="145.0" onAction="#comboCours" prefHeight="39.0" prefWidth="193.0" style="-fx-background-color: #ecf0f1; -fx-border-color: #BDC3C7; -fx-font-size: 16px;" />
+      </VBox>
+
+      <!-- Table View Section -->
+      <TableView fx:id="tableView" layoutX="261.0" layoutY="104.0" prefHeight="489.0" prefWidth="592.0" style="-fx-background-color: #ffffff; -fx-border-color: #BDC3C7;">
          <columns>
             <TableColumn fx:id="colDate" prefWidth="120.0" text="Date" />
             <TableColumn fx:id="colStatut" prefWidth="126.66668701171875" text="Statut" />
@@ -67,25 +64,13 @@
             <TableColumn fx:id="colCours" prefWidth="123.333251953125" text="Cours" />
          </columns>
       </TableView>
-      <Button layoutX="40.0" layoutY="671.0" fx:id="btnAjouter" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="61.0" prefWidth="123.0" text="Ajouter">
-         <font>
-            <Font name="System Bold" size="24.0" />
-         </font>
-      </Button>
-      <Button layoutX="679.0" layoutY="671.0" fx:id="btnFermer" mnemonicParsing="false" onAction="#btnFermer" prefHeight="61.0" prefWidth="123.0" text="Fermer">
-         <font>
-            <Font name="System Bold" size="23.0" />
-         </font>
-      </Button>
-      <Button layoutX="468.0" layoutY="671.0" fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="61.0" prefWidth="123.0" text="Supprimer">
-         <font>
-            <Font name="System Bold" size="19.0" />
-         </font>
-      </Button>
-      <Button layoutX="260.0" layoutY="671.0" fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifier" prefHeight="61.0" prefWidth="123.0" text="Modifier">
-         <font>
-            <Font name="System Bold" size="22.0" />
-         </font>
-      </Button>
+
+      <!-- Button Section (Action buttons) -->
+      <HBox layoutX="40.0" layoutY="670.0" spacing="20.0">
+         <Button fx:id="btnAjouter" mnemonicParsing="false" onAction="#btnAjouter" prefHeight="61.0" prefWidth="123.0" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" text="Ajouter" />
+         <Button fx:id="btnModifier" mnemonicParsing="false" onAction="#btnModifier" prefHeight="61.0" prefWidth="133.0" style="-fx-background-color: #F39C12; -fx-text-fill: white; -fx-font-size: 22px; -fx-font-weight: bold;" text="Modifier" />
+         <Button fx:id="btnSupprimer" mnemonicParsing="false" onAction="#btnSupprimer" prefHeight="61.0" prefWidth="133.0" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 19px; -fx-font-weight: bold;" text="Supprimer" />
+         <Button fx:id="btnFermer" mnemonicParsing="false" onAction="#btnFermer" prefHeight="61.0" prefWidth="142.0" style="-fx-background-color: #3498DB; -fx-text-fill: white; -fx-font-size: 23px; -fx-font-weight: bold;" text="Fermer" />
+      </HBox>
    </children>
 </AnchorPane>

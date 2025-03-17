@@ -275,7 +275,7 @@ public class GestionEmergementControllerG implements Initializable {
         cbExcuse.setSelected(false);
         comboProfesseur.setValue(null);
         comboCours.setValue(null);
-        btnAjouter.setDisable(true);
+        btnAjouter.setDisable(false);
     }
 
     private void recupererLigneSelectionnee(MouseEvent event) {
@@ -286,6 +286,8 @@ public class GestionEmergementControllerG implements Initializable {
             comboProfesseur.setValue(selectionne.getProfesseur());
             comboCours.setValue(selectionne.getCours());
         }
+        btnAjouter.setDisable(true);
+
     }
 
     private void setStatutSelectionne(String statut) {
@@ -320,7 +322,7 @@ public class GestionEmergementControllerG implements Initializable {
         colCours.setCellValueFactory(cellData -> new SimpleStringProperty(cellData.getValue().getCours().getNom()));
 
         tableView.setItems(listeEmargements);
-        btnAjouter.setDisable(true);
+        btnAjouter.setDisable(false);
 
         configurerComboBoxProfesseur();
         configurerComboBoxCours();

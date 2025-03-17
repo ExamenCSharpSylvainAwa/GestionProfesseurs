@@ -1,5 +1,8 @@
 package sn.groupeisi.gestionprofesseurs.Services;
 
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.Session;
 import sn.groupeisi.gestionprofesseurs.Entities.Users;
 import sn.groupeisi.gestionprofesseurs.Utils.HibernateUtil;
 
@@ -134,6 +137,36 @@ public class UserService {
             }
         }
     }
+
+    public List<Users> getProfesseurs() {
+        EntityManager entityManager = null;
+        try {
+            entityManager = HibernateUtil.getEntityManagerFactory().createEntityManager();
+            // Modifier la requête pour filtrer par le rôle "professeur"
+            return entityManager.createQuery("FROM Users u WHERE u.role = :role", Users.class)
+                    .setParameter("role", "professeur") // Remplacer "professeur" par le rôle approprié
+                    .getResultList();
+        } finally {
+            if (entityManager != null) entityManager.close();
+        }
+    }
+
+
+
+
+    @Setter
+    @Getter
+    private static Users currentUser;
+
+    public Users getUserById(Long userId) {
+        EntityManager entityManager = HibernateUtil.getEntityManagerFactory().createEntityManager();
+        try {
+            return entityManager.find(Users.class, userId);
+        } finally {
+            entityManager.close();
+        }
+    }
+
 
 
 }
