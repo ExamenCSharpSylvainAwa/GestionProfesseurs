@@ -6,10 +6,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import sn.groupeisi.gestionprofesseurs.Entities.Emargements;
 import sn.groupeisi.gestionprofesseurs.Services.EmargementService;
-import sn.groupeisi.gestionprofesseurs.Utils.GraphiqueStatistiquesBarres;
-import sn.groupeisi.gestionprofesseurs.Utils.GraphiqueStatistiquesLignes;
-import sn.groupeisi.gestionprofesseurs.Utils.GraphiqueStatistiquesdoughnut;
-import sn.groupeisi.gestionprofesseurs.Utils.RapportExportateurExcel;
+import sn.groupeisi.gestionprofesseurs.Utils.*;
 
 import java.io.File;
 import java.util.List;
@@ -85,7 +82,7 @@ public class RapportsController {
 
     @FXML
     private void btnPdf(ActionEvent event) {
-        /*if (emargements != null && !emargements.isEmpty()) {
+        if (emargements != null && !emargements.isEmpty()) {
             FileChooser fileChooser = new FileChooser();
             fileChooser.setTitle("Enregistrer le fichier PDF");
             fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Fichiers PDF", "*.pdf"));
@@ -98,6 +95,6 @@ public class RapportsController {
         } else {
             System.out.println("Aucune donnée à exporter.");
         }
-         */
+
     }
 }

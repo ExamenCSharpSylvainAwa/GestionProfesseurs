@@ -1,4 +1,5 @@
-<?import javafx.scene.control.Hyperlink?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
@@ -6,43 +7,65 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Label?>
 
-<AnchorPane fx:id="connexionPage" xmlns="http://javafx.com/javafx"
+
+<AnchorPane fx:id="connexionPage"
+            xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.LoginController"
-            prefHeight="500.0" prefWidth="600.0"
-            style="-fx-background-color: #f0f0f0; -fx-alignment: center;">
+            style="-fx-background-color: white;">
 
-    <!-- Formulaire de connexion avec design moderne -->
-    <VBox alignment="CENTER" spacing="20.0"
-          layoutX="100.0" layoutY="50.0" prefWidth="400.0"
-          style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 15, 0, 0, 10); -fx-padding: 30px;">
+    <VBox alignment="CENTER"
+          spacing="30"
+          AnchorPane.topAnchor="0"
+          AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0"
+          style="-fx-background-color: white;">
 
-        <!-- Logo avec effet -->
-        <ImageView fitWidth="90.0" fitHeight="90.0" pickOnBounds="true" preserveRatio="true">
+        <!-- Avatar Utilisateur -->
+        <ImageView fitWidth="120"
+                   fitHeight="120"
+                   preserveRatio="true">
             <image>
-                <Image url="https://cdn-icons-png.flaticon.com/512/149/149071.png"/>
+                <Image url="https://cdn-icons-png.flaticon.com/512/2815/2815428.png"/>
             </image>
         </ImageView>
 
-        <!-- Champ Email avec style moderne -->
-        <TextField fx:id="emailField" promptText="Entrez votre Email"
-                   prefHeight="40.0" prefWidth="300.0"
-                   style="-fx-background-color: #f4f4f4; -fx-border-radius: 10; -fx-prompt-text-fill: #888; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-color: #ddd; -fx-border-width: 1px;"/>
+        <!-- Titre -->
+        <Label text="Espace Connexion"
+               style="-fx-font-size: 24px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #2C3E50;"/>
 
-        <!-- Champ Mot de passe avec style moderne -->
-        <PasswordField fx:id="passwordField" promptText="Mot de passe"
-                       prefHeight="40.0" prefWidth="300.0"
-                       style="-fx-background-color: #f4f4f4; -fx-border-radius: 10; -fx-prompt-text-fill: #888; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-color: #ddd; -fx-border-width: 1px;"/>
+        <!-- Conteneur Formulaire -->
+        <VBox spacing="20"
+              alignment="CENTER"
+              style="-fx-max-width: 300px;">
 
-        <!-- Bouton de connexion avec effet interactif -->
-        <Button fx:id="loginButton" text="Connexion" onAction="#handleLogin"
-                style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 10px 20px; -fx-border: none; -fx-cursor: hand; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 10);"
-                prefHeight="40.0" prefWidth="250.0" />
+            <!-- Champ Email -->
+            <TextField fx:id="emailField"
+                       promptText="Email"
+                       style="-fx-background-color: #F0F0F0;
+                              -fx-background-radius: 5;
+                              -fx-padding: 10px;"/>
 
-        <!-- Lien mot de passe oublié avec style épuré -->
-        <Hyperlink text="Mot de passe oublié ?"
-                   style="-fx-text-fill: #4CAF50; -fx-font-size: 12px; -fx-font-weight: bold; -fx-cursor: hand;" />
+            <!-- Champ Mot de passe -->
+            <PasswordField fx:id="passwordField"
+                           promptText="Mot de passe"
+                           style="-fx-background-color: #F0F0F0;
+                                  -fx-background-radius: 5;
+                                  -fx-padding: 10px;"/>
 
+            <!-- Bouton Connexion -->
+            <Button fx:id="loginButton"
+                    text="Se Connecter"
+                    onAction="#handleLogin"
+                    style="-fx-background-color: #3498DB;
+                           -fx-text-fill: white;
+                           -fx-background-radius: 5;
+                           -fx-padding: 10px;"/>
+        </VBox>
     </VBox>
 </AnchorPane>

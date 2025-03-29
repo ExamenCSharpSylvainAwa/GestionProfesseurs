@@ -5,41 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8409011f-2822-418a-a511-0d647c9a59d6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/ProfesseursEmargementController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/RapportsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/NotificationsService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/ProfesseurEmargementService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/GraphiqueStatistiquesBarres.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/GraphiqueStatistiquesLignes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/GraphiqueStatistiquesdoughnut.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/RapportExportateurExcel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/ProfesseurEmargement.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Rapports.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Utils/RapportExportateur.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/AdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionEmergementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionEmergementController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionEmergementControllerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionEmergementControllerG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurControllerG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/GestionProfesseurControllerG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/CoursService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/CoursService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/EmailService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/RapportsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Controllers/RapportsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/EmargementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/EmargementService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/groupeisi/gestionprofesseurs/Services/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Admin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCours.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCours.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCoursG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionCoursG.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionEmergements.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionEmergements.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionEmergementsG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionEmergementsG.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseurs.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseursG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionProfesseursG.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSalles.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSalles.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSallesG.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/GestionSallesG.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Gestionnaire.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Gestionnaire.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Rapports.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sn/groupeisi/gestionprofesseurs/pages/Rapports.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

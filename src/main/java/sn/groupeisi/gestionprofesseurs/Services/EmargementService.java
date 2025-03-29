@@ -88,15 +88,19 @@ public class EmargementService {
     public boolean emargementExiste(Long professeurId, Long coursId, LocalDate date) {
         EntityManager entityManager = HibernateUtil.getEntityManagerFactory().createEntityManager();
         try {
+            // Utiliser directement l'objet LocalDate sans conversion
             List<Emargements> result = entityManager.createQuery(
                             "FROM Emargements e WHERE e.professeur.id = :professeurId " +
                                     "AND e.cours.id = :coursId AND e.date = :date", Emargements.class)
                     .setParameter("professeurId", professeurId)
                     .setParameter("coursId", coursId)
-                    .setParameter("date", Date.valueOf(date))
-                    .setMaxResults(1)  // Limite la recherche à un seul résultat
+                    .setParameter("date", date) // Passer l'objet LocalDate directement
+                    .setMaxResults(1)
                     .getResultList();
             return !result.isEmpty();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false; // En cas d'erreur, supposer qu'il n'existe pas pour éviter de bloquer l'opération
         } finally {
             entityManager.close();
         }

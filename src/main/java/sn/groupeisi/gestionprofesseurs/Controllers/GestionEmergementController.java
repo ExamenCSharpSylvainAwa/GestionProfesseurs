@@ -26,6 +26,8 @@ import java.util.Map;
 import java.util.ResourceBundle;
 import java.util.stream.Collectors;
 
+import static sn.groupeisi.gestionprofesseurs.Utils.EmailService.envoyerEmail;
+
 public class GestionEmergementController implements Initializable {
 
     @FXML
@@ -193,6 +195,7 @@ public class GestionEmergementController implements Initializable {
                 listeEmargements.add(emargement);
                 tableView.refresh();
                 nettoyerChamps();
+                envoyerMailProf(emargement);
                 showAlert("Succès", "L'émargement a été ajouté avec succès.", Alert.AlertType.INFORMATION);
             } else {
                 showAlert("Erreur", "Un émargement existe déjà pour cette combinaison de professeur, cours et date.", Alert.AlertType.ERROR);
@@ -213,6 +216,7 @@ public class GestionEmergementController implements Initializable {
             if (emargementService.modifierEmargement(selectionne)) {
                 tableView.refresh();
                 nettoyerChamps();
+
                 showAlert("Succès", "L'émargement a été modifié avec succès.", Alert.AlertType.INFORMATION);
             } else {
                 showAlert("Erreur", "Erreur lors de la modification de l'émargement.", Alert.AlertType.ERROR);
@@ -335,5 +339,44 @@ public class GestionEmergementController implements Initializable {
         comboCours.setOnAction(event -> verifierChamps());
 
         tableView.setOnMouseClicked(this::recupererLigneSelectionnee);
+    }
+    public void envoyerMailProf(Emargements emargement) {
+        if (emargement == null || emargement.getProfesseur() == null) {
+            System.out.println("Impossible d'envoyer l'email: Données d'émargement invalides");
+            return;
+        }
+
+        Users professeur = emargement.getProfesseur();
+        Cours cours = emargement.getCours();
+
+        // Vérifier si le professeur a une adresse email
+        String emailProfesseur = professeur.getEmail();
+        if (emailProfesseur == null || emailProfesseur.isEmpty()) {
+            System.out.println("Impossible d'envoyer l'email: Adresse email du professeur non disponible");
+            return;
+        }
+
+        // Construire le sujet et le contenu de l'email
+        String sujet = "Confirmation d'émargement - " + cours.getNom();
+
+        StringBuilder messageTexte = new StringBuilder();
+        messageTexte.append("Bonjour ").append(professeur.getNom()).append(" ").append(professeur.getPrenom()).append(",\n\n");
+        messageTexte.append("Nous vous informons qu'un émargement a été enregistré avec vos identifiants pour le cours suivant :\n\n");
+        messageTexte.append("Cours : ").append(cours.getNom()).append("\n");
+        messageTexte.append("Date : ").append(emargement.getDate()).append("\n");
+        messageTexte.append("Statut : ").append(emargement.getStatut()).append("\n\n");
+        messageTexte.append("Si cet émargement ne correspond pas à votre présence réelle, veuillez contacter l'administration dans les plus brefs délais.\n\n");
+        messageTexte.append("Cordialement,\n");
+        messageTexte.append("L'équipe administrative\n");
+        messageTexte.append("Groupe ISI");
+
+        // Envoyer l'email
+        try {
+            envoyerEmail(emailProfesseur, sujet, messageTexte.toString());
+            System.out.println("Email de notification d'émargement envoyé à " + emailProfesseur);
+        } catch (Exception e) {
+            System.err.println("Erreur lors de l'envoi de l'email: " + e.getMessage());
+            e.printStackTrace();
+        }
     }
 }

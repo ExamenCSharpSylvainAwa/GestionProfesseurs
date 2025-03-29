@@ -25,6 +25,8 @@ module sn.groupeisi.gestionprofesseurs {
     requires org.apache.poi.ooxml;
     requires org.jfree.jfreechart;
     requires java.desktop;
+    requires layout;
+    requires kernel;
 
     opens sn.groupeisi.gestionprofesseurs to javafx.fxml;
     exports sn.groupeisi.gestionprofesseurs;

@@ -1,64 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="857.0" prefWidth="810.0" style="-fx-background-color: #f4f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.AdminController">
-   <children>
-      <!-- Titre de la page avec style moderne -->
-      <Label layoutX="66.0" layoutY="172.0" style="-fx-font-size: 28px; -fx-font-family: 'Segoe UI', sans-serif; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Administrateur">
-      </Label>
-
-      <!-- Bouton Utilisateurs -->
-      <Button layoutX="358.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="Utilisateurs">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-
-      <!-- Bouton Cours -->
-      <Button layoutX="358.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnCours" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="COURS">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-
-      <!-- Bouton Rapports -->
-      <Button layoutX="429.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnRapport" prefHeight="54.0" prefWidth="209.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="RAPPORTS">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-
-      <!-- Bouton Emergents -->
-      <Button layoutX="586.0" layoutY="452.0" mnemonicParsing="false" onAction="#btnEmergements" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="EMERGEMENTS">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-
-      <!-- Image dans un TilePane avec bordure arrondie -->
-      <TilePane layoutX="30.0" layoutY="260.0" prefHeight="257.0" prefWidth="271.0" style="-fx-background-radius: 15;">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="4521.0" prefWidth="1003.0" style="-fx-background-color: #f4f7fb;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sn.groupeisi.gestionprofesseurs.Controllers.AdminController">
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="4585.0" prefWidth="595.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="355.0" fitWidth="269.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../../../../../../Users/LAPTOP/Downloads/téléchargement.jpeg" />
-               </image>
-            </ImageView>
+            <!-- Titre de la page avec style moderne -->
+            <Label style="-fx-font-size: 28px; -fx-font-family: 'Segoe UI', sans-serif; -fx-font-weight: bold; -fx-text-fill: #333333;" text="Administrateur">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Label>
+
+            <!-- Conteneur principal en grille -->
+            <HBox alignment="CENTER" spacing="30.0">
+               <children>
+                  <!-- Section gauche avec image et bouton déconnexion -->
+                  <VBox alignment="CENTER" spacing="15.0" HBox.hgrow="ALWAYS">
+                     <children>
+                        <StackPane style="-fx-background-radius: 15;">
+                           <children>
+                              <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="https://images.icon-icons.com/37/PNG/512/administrator_3551.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </StackPane>
+
+                        <!-- Bouton de déconnexion avec couleur distincte -->
+                        <Button fx:id="btnDeconnexion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnDeconnexion" prefHeight="54.0" style="-fx-background-color: #ffffff; -fx-border-color: #fb0808; -fx-border-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px; -fx-border-width: 2px;" text="DECONNEXION" textFill="#fb0808">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+
+                  <!-- Section droite avec les boutons d'actions -->
+                  <GridPane hgap="20.0" vgap="20.0" HBox.hgrow="ALWAYS">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <!-- Bouton Utilisateurs -->
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnProfesseurs" prefHeight="54.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="Utilisateurs" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+
+                        <!-- Bouton Salles -->
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnSalle" prefHeight="54.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="Salles" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+
+                        <!-- Bouton Cours -->
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnCours" prefHeight="54.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="COURS" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+
+                        <!-- Bouton Emergents -->
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnEmergements" prefHeight="54.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="EMERGEMENTS" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+
+                        <!-- Bouton Rapports -->
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#btnRapport" prefHeight="54.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="RAPPORTS" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </HBox>
          </children>
-      </TilePane>
-
-      <!-- Bouton de déconnexion avec couleur distincte -->
-      <Button fx:id="btnDeconnexion" layoutX="30.0" layoutY="629.0" mnemonicParsing="false" onAction="#btnDeconnexion" prefHeight="54.0" prefWidth="269.0" style="-fx-background-color: #ffffff; -fx-border-color: #fb0808; -fx-border-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px; -fx-border-width: 2px;" text="DECONNEXION" textFill="#fb0808">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-
-      <!-- Bouton Salles -->
-      <Button layoutX="581.0" layoutY="294.0" mnemonicParsing="false" onAction="#btnSalle" prefHeight="54.0" prefWidth="159.0" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-background-radius: 10; -fx-font-size: 14px; -fx-font-weight: bold; -fx-cursor: hand; -fx-padding: 10px;" text="Salles">
-         <font>
-            <Font size="18.0" />
-         </font></Button>
-   </children>
-</AnchorPane>
+         <padding>
+            <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
